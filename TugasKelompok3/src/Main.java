@@ -58,6 +58,8 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         do {
+            scores.set(scoreIdx, 0);
+
             System.out.println("\nLevel " + lvl);
             System.out.println("-------");
             System.out.println("\t\t" + scrambleWord(dictionary));
@@ -66,14 +68,16 @@ public class Main {
                 System.out.print(answerCount + "> Your Answer : ");
                 String answer = input.nextLine();
 
-                if (!lastAnswer.contains(answer)) {
+                if ((int)answer.length() < 3 || (int)answer.length() > 6) {
+                    System.out.println("\n** Please answer with minimun 3 character and maximum 6 character!! **\n");
+                } else if (lastAnswer.contains(answer)) {
+                    System.out.println("\n** you can't answer with the same words!! **\n");
+                } else {
                     if (dictionary.contains(answer)) {
                         scores.set(scoreIdx, scores.get(scoreIdx) + 10);
                         System.out.println(">** Right. Your Score : " + scores.get(scoreIdx) + " **<\n");
                     }
                     answerCount++;
-                } else {
-                    System.out.println("\n** you can't answer with the same words!! **\n");
                 }
 
                 lastAnswer.add(answer);
