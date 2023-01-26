@@ -7,21 +7,20 @@ public class Main {
     public static void main(String[] args) {
 
         List<Integer> scores = new ArrayList<Integer>(Arrays.asList(0,0,0));
-        List<String> lastAnswer = new ArrayList<String>();
+        List<String> lastAnswer = new ArrayList<String>();  
         List<String> dictLevel1 = Arrays.asList(
-                "die", "led", "lei", "let", "lid", "lie", "lit", "tie", "deli",
-                "diet", "edit", "idle", "lied", "tide", "tied", "tile", "tilt", "tilde", "tiled",
-                "title", "tilted", "titled"
-        );
+            "sachet", "scathe", "chase", "cheat", "chest", "teach", "haste", "ache",
+            "cash", "chat", "each", "tach", "tech", "hate", "heat", "eth", "has", "hat" ,
+            "she", "the", "ace", "act", "cat", "ate", "eat", "est"
+        );      
         List<String> dictLevel2 = Arrays.asList(
-                "ace","can","sac","sea","sec","see","aces","acne","cane","cans",
-                "case","ease","sane","scan","seen","acnes","canes","cease","cense",
-                "scene","encase","seance"
-        );
+            "ration", "intro", "nitro", "ratio", "train", "anti", "into", "iron", 
+            "noir", "nori", "rain", "riot", "air", "ant", "art", "ion", "not", "oar", 
+            "oat", "ran", "rat", "rot"
+        );                
         List<String> dictLevel3 = Arrays.asList(
-                "eon","hen","her","hoe","hon","ken","nor","one","ore","rho",
-                "roe","hero","hoer","hone","honk","horn","kern","oner","heron",
-                "honer", "honker"
+            "drake", "ready", "yerk", "dark", "yard", "year", "dare", "dear", 
+            "read", "key", "yak", "ark", "day", "dry", "dye", "ray", "red"            
         );
 
         System.out.println(
